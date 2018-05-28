@@ -87,7 +87,7 @@ We use Distributed Denial of Service (DDoS) mitigation services powered by an in
 
 <!--- __Customization:__ You could add more information on your encryption strategy (e.g. algorithm used), but it’s not required. --->
 
-Encryption in transit: All data sent to or from our infrastructure is encrypted in transit via industry best-practices using Transport Layer Security (TLS). You can see our SSLLabs report [here](https://www.ssllabs.com/ssltest/analyze.html?d=DOMAIN]
+Encryption in transit: All data sent to or from our infrastructure is encrypted in transit via industry best-practices using Transport Layer Security (TLS). You can see our SSLLabs report [here](https://www.ssllabs.com/ssltest/analyze.html?d=DOMAIN)
 Encryption at rest: All our user data (including passwords) is encrypted using battled-proofed encryption algorithms in the database.
 
 ## Data retention and removal
