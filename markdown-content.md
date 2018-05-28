@@ -2,7 +2,7 @@
 
 ## Overview
 
-*__Explanation:__ This section gives a quick introduction to your security overview. It provides with contact details and a link to your security.txt if you have any*
+<!--- __Explanation:__ This section gives a quick introduction to your security overview. It provides with contact details and a link to your security.txt if you have any --->
 
 *__Customization:__ Change the contact email. Remove the [Securitytxt](https://securitytxt.org/) link if you don’t have any*
 
