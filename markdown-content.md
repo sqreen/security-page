@@ -291,4 +291,5 @@ We’re compliant to the General Data Protection Regulation (GDPR). The purpose 
 
 <!--- __Customization:__ This section should be customized to reflect your internal practices. --->
 
-Our strict internal procedure prevents any employee or administrator from gaining access to user data. Limited exceptions can be made for customer support.
+- Our strict internal procedure prevents any employee or administrator from gaining access to user data. Limited exceptions can be made for customer support.
+- All our employees sign a Non-Disclosure and Confidentiality Agreement when joining the company to protect our customers' sensitive information.
