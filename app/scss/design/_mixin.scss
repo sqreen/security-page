@@ -1,0 +1,58 @@
+// REM calculator
+//=======================================
+@function rem-calc($size) {
+  $remSize: $size / 14px;
+  @return #{$remSize}rem;
+};
+
+// Media Queries
+//=======================================
+$tablet: 769px !default;
+$desktop: 980px !default;
+$widescreen: 1180px !default;
+
+@mixin from($device) {
+  @media screen and (min-width: $device) {
+    @content;
+  }
+}
+@mixin until($device) {
+  @media screen and (max-width: $device - 1px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: $tablet - 1px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (min-width: $tablet) {
+    @content;
+  }
+}
+@mixin tablet-only {
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+@mixin touch {
+  @media screen and (max-width: $desktop - 1px) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+@mixin desktop-only {
+  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px) {
+    @content;
+  }
+}
+@mixin widescreen {
+  @media screen and (min-width: $widescreen) {
+    @content;
+  }
+}

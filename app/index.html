@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/style.min.css">
+  </head>
+  <body>
+    <section class="security-content">
+      <div class="sc-left">
+        <div class="table-of-contents">
+          <h4>Table of Contents</h4>
+          <ul></ul>
+        </div>
+      </div>
+      <div class="sc-right">
+        <div id="overview" class="sc-block">
+          <h2>Overview</h2>
+          <p>Sqreen respects your privacy and takes significant efforts to protect all your data.</p>
+          <p>We are <a href="/company.html">product security nerds</a>. Transparency and responsiveness are part of our key values. We care about developers protection, and we are developers ourselves. Making products safer can't be achieved without the
+            community!</p>
+          <p>Sqreen supports responsible disclosure of vulnerabilities. We encourage all of you to report security issues to security@sqreen.io.</p>
+          <p>Keeping our customers' data protected is the most important thing that Sqreen does.</p>
+          <p>As you continue to learn more about Sqreen, we recommend you to review our <a href="/terms.html">Terms of Service</a> and <a href="/privacy.html">Privacy Policy</a>.</p>
+        </div>
+        <div id="security_team" class="sc-block">
+          <h2>Security Team</h2>
+          <p>Our team has played lead roles in designing and building highly secure Internet facing systems at companies ranging from startups to large public companies like Apple, Airbus and security consulting companies.</p>
+        </div>
+        <div id="best_practices" class="sc-block">
+          <h2>Best Practices</h2>
+          <ul>
+            <li>All of our services run in the cloud. Sqreen does not host or run its own routers, load balancers, DNS servers, or physical servers.</li>
+            <li>Our services and data are hosted in Amazon Web Services (AWS) facilities in Europe (other zones are available on Enterprise plans on request). Sqreen services have been built with resilience and principle of least privilege in mind.</li>
+            <li>Our servers are within our own virtual private cloud (VPC) with network access control lists (ACL’s) and no public IP addresses that prevent unauthorized requests getting to our internal network.</li>
+          </ul>
+        </div>
+        <div id="application_protection" class="sc-block">
+          <h2>Application Protection</h2>
+          <p>
+            <a title="Realtime application protection" href="https://sqreen.io/?utm_source=badge">
+              <img style="width:109px;height:36px" src="https://s3-eu-west-1.amazonaws.com/sqreen-assets/badges/20161213/sqreen-badgeDark@2x.png" alt="Sqreen | Runtime Application Protection" align="middle" />
+            </a>
+          </p>
+          <ul>
+            <li>We of course use <a href="https://www.sqreen.io/">Sqreen</a> to protect our application and customers at runtime.</li>
+            <li>Sqreen blocks a <a href="http://doc.sqreen.io/docs/list-of-attacks-detected-and-blocked">wide range of attacks</a>: SQL injections, NoSQL injections, Cross-site scripting (XSS) attacks, Shell & Code injections, Security Bots and Scanners etc.</li>
+            <li>Sqreen will also detect suspicious user activities to help us identify attackers early and avoid breaches.</li>
+          </ul>
+        </div>
+        <div id="data" class="sc-block">
+          <h2>Data</h2>
+          <p>Please refer to our <a href="/privacy.html">privacy policy</a> for more details.</p>
+        </div>
+        <div id="authentication" class="sc-block">
+          <h2>Authentication</h2>
+          <ul>
+            <li>Sqreen is served 100% over HTTPs and runs a zero-trust corporate network.</li>
+            <li>We have two-factor authentication (2FA) and strong password policies on all our 3rd party services to ensure access to cloud services are well protected.</li>
+          </ul>
+        </div>
+        <div id="admin_controls" class="sc-block">
+          <h2>Admin Controls</h2>
+          <p>Only a small restricted subset of Sqreen employees have access to our customer data.</p>
+        </div>
+        <div id="application_monitoring" class="sc-block">
+          <h2>Application Monitoring</h2>
+          <ul>
+            <li>We produce audit logs for all activity, ship logs to loggly for analysis, and use S3/Glacier for backup purposes.</li>
+            <li>All access to Sqreen applications is logged and audited.</li>
+            <li>Bastion hosts are used to login to isolated services.</li>
+            <li>All actions taken on production consoles or in the Sqreen application are logged.</li>
+          </ul>
+        </div>
+        <div id="compliance" class="sc-block">
+          <h2>Compliance</h2>
+          <p>Sqreen complies with EU-U.S. Privacy Shield Framework regarding the collection, use, and retention of personal information from European Union member countries.</p>
+        </div>
+        <div id="pci_obligations" class="sc-block">
+          <h2>PCI Obligations</h2>
+          <p>Sqreen is not subject to PCI obligations. All payment instrument processing is outsourced to Stripe.</p>
+        </div>
+        <div id="responsible_disclosure" class="sc-block">
+          <h2>Responsible disclosure</h2>
+
+          <div class="inside-block">
+            <h3>Coverage</h3>
+            <p>*.sqreen.io and vulnerabilities discovered into Sqreen Agents.</p>
+          </div>
+
+          <div class="inside-block">
+            <h3>Exclusions</h3>
+            <ul>
+              <li>blog.sqreen.io</li>
+              <li>doc.sqreen.io</li>
+              <li>status.sqreen.io</li>
+              <li>support.sqreen.io</li>
+            </ul>
+          </div>
+
+          <div class="inside-block">
+            <h3>Please do</h3>
+            <p>Accepted vulnerabilities are the following:</p>
+            <ul>
+              <li>Cross-Site Scripting (XSS)</li>
+              <li>Open redirect</li>
+              <li>Cross-site Request Forgery (CSRF)</li>
+              <li>Command/File/URL inclusion</li>
+              <li>Authentication issues</li>
+              <li>Code execution</li>
+            </ul>
+          </div>
+
+          <div class="inside-block">
+            <h3>Please don't</h3>
+            <p>This bug bounty program does NOT include:</p>
+            <ul>
+              <li>Logout CSRF</li>
+              <li>Denial of Service (DoS)</li>
+              <li>Social engineering</li>
+              <li>3rd party cookies</li>
+            </ul>
+          </div>
+
+          <div class="inside-block">
+            <h3>Rewards</h3>
+            <p>All of you reporting issues will be credited on our Hall of Fame. And we will be super glad to:</p>
+            <ul>
+              <li>Offer a 12 month premium subscription for you or one of your customers, friends or family members</li>
+              <li>Send you a package of special Sqreen hunter goodies - shipped only to security researchers helping us to make Sqreen safer</li>
+              <li>Credit your findings on our Hall of Fame</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/main.min.js"></script>
+  </body>
+</html>
