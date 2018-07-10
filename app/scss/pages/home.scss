@@ -1,4 +1,4 @@
-$main-color: cyan;
+$main-color: #4842B7;
 
 body, html {
   font-size: 14px;
@@ -11,15 +11,78 @@ body, html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
+header {
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  text-align: center;
+
+  .wrapper {
+    padding: 162px 20px 76px;
+    max-width: 1040px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+  }
+
+  h1 {
+    font-size: rem-calc(40px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    color: #4c4c4c;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: rem-calc(19px);
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.47;
+    text-align: center;
+    color: #8f8f8f;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  @include mobile() {
+    padding: 0;
+
+    .wrapper {
+      padding: 120px 20px 90px;
+    }
+
+    h1 {
+      font-size: 2.2em;
+    }
+
+    .subtitle {
+      font-size: 1.8em;
+    }
+
+    .button {
+      margin-top: 20px;
+    }
+  };
+}
+
 .security-content {
   padding: 100px 0;
-  max-width: 1040px;
-  margin: 0 auto;
 
   .wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 0 20px;
+    max-width: 1040px;
+    margin: 0 auto;
   }
 
   .left {
@@ -132,6 +195,10 @@ body, html {
       line-height: 27px;
     }
 
+    strong {
+      font-weight: bold;
+    }
+
     ul {
       display: block;
 
@@ -159,40 +226,13 @@ body, html {
     }
   }
 
-  @include tablet-only() {
-    .left {
-      .table-of-contents {
-        &.fixed {
-          width: 210px;
-        }
-      }
-    }
-  };
-
   @include mobile() {
-    padding: 50px 0;
-    max-width: 1040px;
-    margin: 0 auto;
-
     .wrapper {
       display: block;
     }
 
     .left {
-      width: 100%;
-      padding-right: 0;
-      max-width: 100%;
-      margin-bottom: 30px;
-      position: relative;
-      top: 0;
-
-      .table-of-contents {
-        &.fixed {
-          position: relative;;
-          top: 0;
-          width: 100%;
-        }
-      }
+      display: none;
     }
 
     .right {

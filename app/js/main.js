@@ -11,7 +11,6 @@ $(function() {
     createPage();
   });
 
-
   function createPage () {
     // Variables declarations
     //========================================
