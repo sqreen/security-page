@@ -1,5 +1,3 @@
-# Open Source Security Overview
-
 ## Overview
 
 <!--- __Explanation:__ This section gives a quick introduction to your security overview. It provides with contact details and a link to your security.txt if you have any. --->
