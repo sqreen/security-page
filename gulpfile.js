@@ -1,61 +1,56 @@
-'use strict';
-
-var gulp = require('gulp'),
-    plumber = require('gulp-plumber'),
-    rename = require('gulp-rename');
-var autoprefixer = require('gulp-autoprefixer');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var minifycss = require('gulp-clean-css');
+var gulp = require('gulp');
 var sass = require('gulp-sass');
+var pump = require('pump');
+var concat = require('gulp-concat');
+var rename = require('gulp-rename');
+var uglify = require('gulp-uglify');
+var minifyCSS = require('gulp-minify-css');
 var browserSync = require('browser-sync');
+var useref = require('gulp-useref');
+var autoprefixer = require('gulp-autoprefixer');
 
-gulp.task('browser-sync', function () {
-    browserSync({
-        server: {
-            baseDir: "./app/"
-        }
-    });
+// Tasks -------------------------------------------------------------------- >
+gulp.task('styles', function() {
+  gulp.src('./app/scss/style.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulp.dest('./app/css'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(minifyCSS())
+    .pipe(gulp.dest('./build/css/'))
+    .pipe(browserSync.reload({stream: true}));
 });
 
-gulp.task('bs-reload', function () {
-    browserSync.reload();
+gulp.task('scripts', function (cb) {
+  pump([
+    gulp.src(['./app/js/main.js', './app/js/marked.js', './app/js/jquery-3.3.1.min.js']),
+    concat('app.js'),
+    uglify(),
+    rename({suffix: '.min'}),
+    gulp.dest('./build/js/'),
+    browserSync.reload({stream: true}),
+  ],
+  cb
+  );
 });
 
-gulp.task('styles', function () {
-    gulp.src(['app/scss/style.scss'])
-        .pipe(plumber({
-            errorHandler: function (error) {
-                console.log(error.message);
-                this.emit('end');
-            }
-        }))
-        .pipe(sass())
-        .pipe(autoprefixer('last 2 versions'))
-        .pipe(gulp.dest('app/css/'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(minifycss())
-        .pipe(gulp.dest('app/css/'))
-        .pipe(browserSync.reload({stream: true}));
+gulp.task('serve', function() {
+  browserSync({
+    server: {
+        baseDir: "./app/"
+    }
+  });
 });
 
-gulp.task('scripts', function () {
-    return gulp.src('app/js/main.js')
-        .pipe(plumber({
-            errorHandler: function (error) {
-                console.log(error.message);
-                this.emit('end');
-            }
-        }))
-        .pipe(concat('main.js'))
-        .pipe(rename({suffix: '.min'}))
-        .pipe(uglify())
-        .pipe(gulp.dest('app/js/'))
-        .pipe(browserSync.reload({stream: true}))
+gulp.task('html', function() {
+  gulp.src('./app/index.html')
+  .pipe(useref())
+  .pipe(gulp.dest('./build/'));
 });
 
-gulp.task('default', ['browser-sync'], function () {
-    gulp.watch("app/scss/**/*.scss", ['styles']);
-    gulp.watch("app/js/main.js", ['scripts']);
-    gulp.watch("app/index.html", ['bs-reload']);
+// Run all Gulp tasks and serve application
+gulp.task('default', ['serve', 'html', 'styles', 'scripts'], function() {
+  gulp.watch('app/scss/**/*.scss', ['styles']);
+  gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/js/**/*.js', browserSync.reload);
 });

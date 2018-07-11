@@ -1,21 +1,18 @@
 // Security page
 //========================================
 $(function() {
-  fetch('./markdown-content.md')
-  .then(response => response.text())
-  .then((data) => {
+  $.get('./markdown-content.md', function(data) {
     $('.right').append(marked(data));
     $(document.getElementsByTagName('h2')).each(function() {
       $('.table-of-contents ul').append("<li><a class='link' href='#"+$(this)[0].id+"'>"+$(this)[0].innerText+"</a></li>");
     });
     createPage();
-  });
+  })
 
   function createPage () {
     // Variables declarations
     //========================================
     var lastId,
-        menu            = $('.table-of-contents'),
         topMenu         = $('.table-of-contents ul'),
         menuFixedTop    = 100,
         topMenuHeight   = 423;

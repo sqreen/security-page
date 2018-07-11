@@ -34,7 +34,7 @@ Our security team is comprised of security experts dedicated to improving the se
 <!--- __Customization:__ Minor customization. Choose your cloud provider. Delete irrelevant names and links. --->
 
 All of our services run in the cloud. We don’t host or run our own routers, load balancers, DNS servers, or physical servers.
-Our service is built on [Amazon Web Services | Google Cloud Platform | Microsoft Azure | Heroku|…]. They provide strong security measures to protect our infrastructure and are compliant with most certifications. You can read more about their practices here:
+Our service is built on [Amazon Web Services | Google Cloud Platform | Microsoft Azure | Heroku |…]. They provide strong security measures to protect our infrastructure and are compliant with most certifications. You can read more about their practices here:
 - [AWS](https://aws.amazon.com/security/)
 - [Google Cloud Platform](https://cloud.google.com/security/)
 - [Microsoft Azure](https://www.microsoft.com/en-us/trustcenter/security)
@@ -98,7 +98,7 @@ Encryption at rest: All our user data (including passwords) is encrypted using b
 
 We retain your usage data for a period of 90 days after your trial. All data is then completely removed from the dashboard and server.
 Every user can request the removal of usage data by contacting support.
-Read more about our privacy settings at <DOMAIN/privacy>.
+Read more about our privacy settings at [DOMAIN/privacy](DOMAIN/privacy).
 
 
 ## Business continuity and disaster recovery
