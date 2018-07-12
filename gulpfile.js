@@ -11,10 +11,10 @@ var autoprefixer = require('gulp-autoprefixer');
 
 // Tasks -------------------------------------------------------------------- >
 gulp.task('styles', function() {
-  gulp.src('./app/scss/style.scss')
+  gulp.src('./docs/scss/style.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest('./app/css'))
+    .pipe(gulp.dest('./docs/css'))
     .pipe(rename({suffix: '.min'}))
     .pipe(minifyCSS())
     .pipe(gulp.dest('./build/css/'))
@@ -23,8 +23,8 @@ gulp.task('styles', function() {
 
 gulp.task('scripts', function (cb) {
   pump([
-    gulp.src(['./app/js/main.js', './app/js/marked.js', './app/js/jquery-3.3.1.min.js']),
-    concat('app.js'),
+    gulp.src(['./docs/js/main.js', './docs/js/marked.js', './docs/js/jquery-3.3.1.min.js']),
+    concat('docs.js'),
     uglify(),
     rename({suffix: '.min'}),
     gulp.dest('./build/js/'),
@@ -37,20 +37,20 @@ gulp.task('scripts', function (cb) {
 gulp.task('serve', function() {
   browserSync({
     server: {
-        baseDir: "./app/"
+        baseDir: "./docs/"
     }
   });
 });
 
 gulp.task('html', function() {
-  gulp.src('./app/index.html')
+  gulp.src('./docs/index.html')
   .pipe(useref())
   .pipe(gulp.dest('./build/'));
 });
 
 // Run all Gulp tasks and serve application
 gulp.task('default', ['serve', 'html', 'styles', 'scripts'], function() {
-  gulp.watch('app/scss/**/*.scss', ['styles']);
-  gulp.watch('app/*.html', browserSync.reload);
-  gulp.watch('app/js/**/*.js', browserSync.reload);
+  gulp.watch('docs/scss/**/*.scss', ['styles']);
+  gulp.watch('docs/*.html', browserSync.reload);
+  gulp.watch('docs/js/**/*.js', browserSync.reload);
 });
