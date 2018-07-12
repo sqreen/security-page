@@ -96,11 +96,14 @@ body, html {
     .security-header {
       padding: 0; }
       .security-header .wrapper {
-        padding: 120px 20px 90px; }
+        padding: 120px 20px 70px; }
+      .security-header .logo {
+        max-width: 100px; }
       .security-header h1 {
-        font-size: 2.2em; }
+        font-size: 2rem;
+        margin-bottom: 7px; }
       .security-header .subtitle {
-        font-size: 1.8em; }
+        font-size: 1.28571rem; }
       .security-header .button {
         margin-top: 20px; } }
 
@@ -224,15 +227,17 @@ body, html {
           left: 0;
           top: 10px; }
   @media screen and (max-width: 768px) {
-    .security-content .wrapper {
-      display: block; }
-    .security-content .left {
-      display: none; }
-    .security-content .right {
-      float: none;
-      width: 100%;
-      max-width: 100%;
-      padding: 0; } }
+    .security-content {
+      padding: 40px 0 160px; }
+      .security-content .wrapper {
+        display: block; }
+      .security-content .left {
+        display: none; }
+      .security-content .right {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 0; } }
 
 .security-footer {
   background-color: #f9f9f9;

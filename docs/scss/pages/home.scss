@@ -56,15 +56,20 @@ body, html {
     padding: 0;
 
     .wrapper {
-      padding: 120px 20px 90px;
+      padding: 120px 20px 70px;
+    }
+
+    .logo {
+      max-width: 100px;
     }
 
     h1 {
-      font-size: 2.2em;
+      font-size: rem-calc(28px);
+      margin-bottom: 7px;
     }
 
     .subtitle {
-      font-size: 1.8em;
+      font-size: rem-calc(18px);
     }
 
     .button {
@@ -227,6 +232,8 @@ body, html {
   }
 
   @include mobile() {
+    padding: 40px 0 160px;
+
     .wrapper {
       display: block;
     }
