@@ -1,15 +1,23 @@
 # Security-overview
 
+Read the full docs and context behind the project [here](https://www.sqreen.io/resources/security-page)
+
 ## Get started
 
-```javascript
-  npm install
-  // or
-  yarn install
+How to run it locally:
+```bash
+npm install
+//or
+yarn install
 ```
-then
+And then
+```bash
+gulp
 ```
-  gulp
-```
+It will compile, minify the css and compress the javascript into `/build`.
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+## Easily deploy it with Netlify or Github pages
+
+[Netlify](https://www.sqreen.io/resources/security-page#how-to-deploy-it-on-your-custom-domain)
+
+[Github pages](https://www.sqreen.io/resources/security-page#how-to-deploy-it-on-your-custom-domain)
