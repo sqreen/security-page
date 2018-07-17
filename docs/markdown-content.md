@@ -131,7 +131,7 @@ We back up all our critical assets and regularly attempt to restore the backup t
 <!--- __Customization:__ Medium customization. Delete the tools you’re not using. --->
 
 - We use a runtime protection system that identifies and blocks OWASP Top 10 and business logic attacks in real-time.
-- We use security headers to protect our users from attacks. You can check our grade on [SecurityHeaders.io](https://securityheaders.io/?q=DOMAIN&hide=on&followRedirects=on).
+- We use security headers to protect our users from attacks. You can check our grade on [this security scanner](https://www.sqreen.io/scan?url=https%3A%2F%2FDOMAIN).
 - We use security automation capabilities that automatically detect and respond to threats targeting our apps.
 
 ## Secure development
