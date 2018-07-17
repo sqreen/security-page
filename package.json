@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "gulpfile.js",
+  "repository": "https://github.com/sqreen/security-page",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

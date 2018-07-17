@@ -73,3 +73,5 @@ typings/
 .serverless
 
 /build/
+
+package-lock.json
