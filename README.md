@@ -18,6 +18,6 @@ It will compile, minify the css and compress the javascript into `/build`.
 
 ## Easily deploy it with Netlify or Github pages
 
-[Netlify](https://www.sqreen.io/resources/security-page#how-to-deploy-it-on-your-custom-domain)
+[Netlify](https://www.sqreen.io/resources/security-page#how-to-deploy-it-with-netlify)
 
-[Github pages](https://www.sqreen.io/resources/security-page#how-to-deploy-it-on-your-custom-domain)
+[Github pages](https://www.sqreen.io/resources/security-page#how-to-deploy-it-with-github-pages)
