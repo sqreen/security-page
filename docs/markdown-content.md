@@ -64,9 +64,6 @@ Our network security architecture consists of multiple security zones. We monito
 - An Intrusion Detection and/or Prevention technologies (IDS/IPS) solution that monitors and blocks potential malicious packets.
 - IP address filtering
 
-(SQREEN-CUSTOMER
-We use a security tool to monitor and protect our network from automated scanners, bots and targeted attacks. It blocks attacks and alerts in case of critical threats. It also brings additional features like IP blocking etc.)
-
 ## DDoS protection
 
 <!--- __Recommended for:__ >Series B companies where availability is a big business risk (think e-commerce, business relying on ads or APIs, etc.). --->
@@ -81,7 +78,7 @@ We use Distributed Denial of Service (DDoS) mitigation services powered by an in
 
 <!--- __Recommended for:__ Every company, except if you don’t collect sensitive user data or don’t have users. --->
 
-<!--- __Explanation:__ This part explains the encryption strategy at rest and in transit. There is no good reason not to do data encryption from day one. From data in transit (check your domain with [SSLLabs](https://www.ssllabs.com) to encryption at rest ([in a database](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html) or on your machine’s hard drives). To secure your user's passwords, you should either use [one-way encryption on salted passwords](https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/) or use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). --->
+<!--- __Explanation:__ This part explains the encryption strategy at rest and in transit. There is no good reason not to do data encryption from day one. From data in transit (check your website with [SSLLabs](https://www.ssllabs.com) to encryption at rest ([in a database](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.Encryption.html) or on your machine’s hard drives). To secure your user's passwords, you should either use [one-way encryption on salted passwords](https://blogs.dropbox.com/tech/2016/09/how-dropbox-securely-stores-your-passwords/) or use [bcrypt](https://en.wikipedia.org/wiki/Bcrypt). --->
 
 <!--- __Customization:__ You could add more information on your encryption strategy (e.g. algorithm used), but it’s not required. --->
 
@@ -125,9 +122,6 @@ We back up all our critical assets and regularly attempt to restore the backup t
 - We collect and store logs to provide an audit trail of our applications activity.
 - We use monitoring such as open tracing in our microservices.
 
-(SQREEN-CUSTOMER
-We use a real-time security solution to monitor our applications. Security events are logged and notifications are sent in case of critical attacks to allow for fast remediation.)
-
 ## Application security protection
 
 <!--- __Recommended for:__ >Series A/Series B startups or earlier if you handle sensitive customer data. --->
@@ -137,10 +131,8 @@ We use a real-time security solution to monitor our applications. Security event
 <!--- __Customization:__ Medium customization. Delete the tools you’re not using. --->
 
 - We use a runtime protection system that identifies and blocks OWASP Top 10 and business logic attacks in real-time.
-- We use security headers to protect our users from attacks. You can check our grade on [SecurityHeaders.io](https://securityheaders.io/?q=DOMAIN&hide=on&followRedirects=on)
-
-(SQREEN-CUSTOMER
-We use a security solution to integrate security in our applications and protect our users from data breaches. It integrates protections against the most critical attack categories like injections, cross-site scripting or clickjacking and adds security headers to our application. It blocks attacks and warns us when attackers start stressing our applications.)
+- We use security headers to protect our users from attacks. You can check our grade on [SecurityHeaders.io](https://securityheaders.io/?q=DOMAIN&hide=on&followRedirects=on).
+- We use security automation capabilities that automatically detect and respond to threats targeting our apps.
 
 ## Secure development
 
@@ -157,9 +149,6 @@ We develop following security best practices and frameworks (OWASP Top 10, SANS 
 - We use Static Application Security Testing (SAST) to detect basic security vulnerabilities in our codebase
 - We use Dynamic Application Security Testing (DAST) to scan our applications
 - We rely on [yearly | bi-annually | quarterly] third-party security experts to perform penetration tests of our applications.
-
-(SQREEN-CUSTOMER
-By using security in-app monitoring tools we can more efficiently remediate vulnerabilities that were triggered by security tests, audits or bug bounty programs. We are also warned when application components with known vulnerabilities are used in production (dependencies).)
 
 ## Responsible disclosure
 
@@ -233,10 +222,6 @@ Single sign-on (SSO) is available using your Google account.
 **Role-based access control**
 
 Role-based access control (RBAC) is offered on all our accounts and allows our users to define roles and permissions.
-
-(SQREEN-CUSTOMER
-**Suspicious user monitoring**
-We use tools to monitor suspicious behaviors and react fast in case of account takeovers. It also protects customers against data theft by blocking credential stuffing or brute force attacks.)
 
 ## Compliance
 <!--- __Recommended for:__ >Series A/Series B startups or earlier if you handle medical/financial data or have enterprise customers.  --->
