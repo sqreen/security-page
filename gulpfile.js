@@ -50,12 +50,12 @@ gulp.task('html', function() {
 
 gulp.task('md', function() {
   gulp.src('./docs/markdown-content.md')
-  .pipe(gulp.dest('./dist/'));
+  .pipe(gulp.dest('./build/'));
 });
 
 gulp.task('img', function() {
   gulp.src('./docs/img/**/*.*')
-  .pipe(gulp.dest('./dist/img'));
+  .pipe(gulp.dest('./build/img'));
 });
 
 gulp.task('build', ['html', 'md', 'styles', 'scripts', 'img'])
