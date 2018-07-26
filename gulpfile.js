@@ -48,8 +48,20 @@ gulp.task('html', function() {
   .pipe(gulp.dest('./build/'));
 });
 
+gulp.task('md', function() {
+  gulp.src('./docs/markdown-content.md')
+  .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('img', function() {
+  gulp.src('./docs/img/**/*.*')
+  .pipe(gulp.dest('./dist/img'));
+});
+
+gulp.task('build', ['html', 'md', 'styles', 'scripts', 'img'])
+
 // Run all Gulp tasks and serve application
-gulp.task('default', ['serve', 'html', 'styles', 'scripts'], function() {
+gulp.task('default', ['serve', 'build'], function() {
   gulp.watch('docs/scss/**/*.scss', ['styles']);
   gulp.watch('docs/*.html', browserSync.reload);
   gulp.watch('docs/js/**/*.js', browserSync.reload);
