@@ -232,7 +232,6 @@ body, html {
   }
 
   @include mobile() {
-    padding: 40px 0 160px;
 
     .wrapper {
       display: block;

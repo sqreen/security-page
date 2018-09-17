@@ -1,0 +1,243 @@
+.navbar {
+  background-color: #2D5AAF;
+  
+  border-radius: 0;
+  margin: -1px 0;
+  padding: 15px 0;
+  height: 75px;
+
+  &.navbar-color {
+    background-color: #2D5AAF;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+    padding: 0;
+
+    img {
+      transition: height 0.1s ease-out;
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+  }
+
+  &.is-transparent {
+    background: transparent; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)); /* Standard syntax */
+
+    &.fixed {
+      background: palette(white);
+    }
+  }
+
+  &.navbar-inverse {
+    background-color: palette(white);
+    border: 0;
+
+    + main {
+      padding-top: 162px;
+    }
+
+
+    .navbar-nav > li.active > a {
+      background: transparent;
+      font-weight: bold;
+    }
+
+  }
+
+  &.fixed {
+    background-color: palette(white);
+    -webkit-transition: background-color 100ms linear;
+        -moz-transition: background-color 100ms linear;
+        -o-transition: background-color 100ms linear;
+        -ms-transition: background-color 100ms linear;
+        transition: background-color 100ms linear;
+  }
+}
+
+
+.navbar-inverse .navbar-nav {
+  > li {
+    > a:not(.button__success),
+    > a:hover:not(.button__success),
+    > a:active:not(.button__success),
+    > a:focus:not(.button__success) {
+      color: palette(black);
+    }
+
+    > .button__success {
+      background-color: #4bc9a9;
+      color: palette(white);
+    }
+  }
+}
+
+.fixed .navbar-nav {
+  > li {
+    > a:not(.button__success) {
+      color: palette(black);
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: palette(black);
+      }
+    }
+  }
+}
+
+.navbar-inverse .navbar-nav,
+.navbar-nav {
+  > li {
+    > .button__success:hover,
+    > .button__success:active,
+    > .button__success:focus {
+      color: palette(white);
+      text-decoration: none;
+      background-color: #4bc9a9;
+    }
+  }
+}
+
+.navbar-default .navbar-nav {
+  color: palette(white);
+  margin: auto;
+  > li {
+    float: none;
+    display: inline-block;
+    font-weight: 300;
+    margin-left: 25px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    > a {
+      color: palette(white);
+    }
+
+    > a.button__success {
+      @include font-size(1.6);
+      height: 30px;
+      color: #4bc9a9;
+      border-radius: 8px;
+      background-color: transparent;
+      padding: 0 15px;
+      line-height: 25px;
+      border: 2px solid #4bc9a9;
+    }
+    > a.button__success:hover {
+      color: palette(white);
+      background-color: #4bc9a9;
+      text-decoration: none;
+    }
+
+    > a:hover,
+    > a:active,
+    > a:focus {
+      color: palette(white);
+      text-decoration: underline;
+      background-color: transparent;
+    }
+
+    > a {
+      padding: 15px 0;
+    }
+
+    &.active a {
+      text-decoration: underline;
+    }
+  }
+
+}
+
+.navbar-default, .navbar-collapse, .navbar-default .navbar-collapse {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  text-align: right;
+}
+
+.navbar-default {
+  &.fixed {
+    .navbar-toggle {
+      background-color: #4bc9a9;
+
+      &.collapsed {
+        .icon-bar {
+          background-color: #888;
+        }
+      }
+    }
+
+    .icon-bar {
+      background-color: #888;
+      text-align: right;
+    }
+  }
+
+  .navbar-toggle {
+    background-color: #4bc9a9;
+
+    &:focus,
+    &:hover {
+      background-color: #4bc9a9;
+    }
+
+    .icon-bar {
+      background-color: palette(white);
+    }
+
+    &.collapsed,
+    &.collapsed:focus {
+      background-color: transparent;
+    }
+
+    &.collapsed {
+      .icon-bar {
+        background-color: palette(white);
+      }
+    }
+  }
+
+  &.navbar-inverse,
+  &.navbar-default {
+    .navbar-toggle {
+      background-color: #4bc9a9;
+      border: none;
+
+      &:focus {
+        background-color: #4bc9a9;
+      }
+
+      .icon-bar {
+        background-color: palette(white);
+      }
+
+      &.collapsed {
+        background-color: transparent;
+
+        &:focus {
+          background-color: transparent;
+        }
+
+        .icon-bar {
+          background-color: #888;
+          text-align: right;
+        }
+      }
+
+    }
+  }
+}
+
+.navbar-default .navbar-nav > li > a.button__success {
+  font-size: 14px;
+}
