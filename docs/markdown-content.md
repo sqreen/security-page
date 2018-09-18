@@ -3,10 +3,6 @@
 Keeping our customers' data protected at all times is our highest priority. This security overview provides a high-level overview of the security practices put in place to achieve that objective.
 Have questions or feedback? Feel free to reach out to us at [security@codacy.com](mailto:security@codacy.com)
 
-## Dedicated Security Team
-
-Our security team is comprised of security experts dedicated to improving the security of our organization. Our employees are trained on security incident response and are on call 24/7.
-
 ## Infrastructure
 
 ### Cloud infrastructure
@@ -43,20 +39,6 @@ We back up all our critical assets and regularly attempt to restore the backup t
 - We use technologies to monitor exceptions, logs and detect anomalies in our applications.
 - We collect and store logs to provide an audit trail of our applications activity.
 - We use monitoring such as open tracing in our microservices.
-
-<!--
-## Application security protection
-
-<!--- __Recommended for:__ >Series A/Series B startups or earlier if you handle sensitive customer data. --->
-
-<!--- __Explanation:__ This section describes the tools in place to protect your application from attacks in real-time. Most of the serious data breaches come from application vulnerabilities. Add this section to your overview if you use an application security protection tool to prevent data leaks or takeovers. --->
-
-<!--- __Customization:__ Medium customization. Delete the tools you’re not using. --->
-<!---
-- We use a runtime protection system that identifies and blocks OWASP Top 10 and business logic attacks in real-time.
-- We use security headers to protect our users from attacks. You can check our grade on [this security scanner](https://www.sqreen.io/scan?url=https%3A%2F%2Fcodacy.com).
-- We use security automation capabilities that automatically detect and respond to threats targeting our apps.
---->
 
 ## Secure development
 
