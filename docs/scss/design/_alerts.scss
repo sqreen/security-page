@@ -1,0 +1,47 @@
+.alerts {
+  @include font-size(1.4);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  min-height: 40px;
+  padding: 10px 20px;
+  margin: 0 auto 20px;
+  width: 100%;
+  line-height: 18px;
+
+  p {
+    @include font-size(1.4);
+    display: inline-block;
+    margin-bottom: 0;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0 0 25px;
+  }
+
+  li {
+    line-height: 25px;
+  }
+
+  a {
+    color: palette(primary);
+  }
+}
+
+// Success Alert
+.success {
+  @include alerts-style(#2CDB7F, alerts--message);
+
+  &.reverse {
+    color: palette(white);
+  }
+}
+
+// Error Alert
+.error {
+  @include alerts-style(palette(danger), alerts--message);
+
+  &.reverse {
+    color: palette(white);
+  }
+}

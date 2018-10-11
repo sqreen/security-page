@@ -11,6 +11,20 @@
 // Design
 @import "design/_reset";
 @import "design/_mixin";
+@import "design/_mixins";
+
+
+@import 'design/utils';
+@import 'design/variables';
+
+@import "design/fonts";
+@import 'design/typography';
+@import 'design/alerts';
+@import 'design/base';
+@import 'design/buttons';
+@import 'design/navigation';
+@import 'design/form';
+@import 'design/footer';
 
 //Pages
 @import "pages/home";

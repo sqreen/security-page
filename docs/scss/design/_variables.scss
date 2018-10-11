@@ -1,0 +1,41 @@
+// Pallete Variables
+$palettes: (
+    gray: (
+      base: #768389,
+      baseLight: #B0BBC4,
+      light: #DBE6EC,
+      lightest: #F4F9F9,
+      dark: #4F5B60,
+      darkest: #254051
+    ),
+    black: (
+      base: #242C33
+    ),
+    white: (
+      base: #FFFFFF
+    ),
+    primary: (
+      base: #00A1CC,
+      dark: #2D5AAF,
+      darkest: #213848,
+      light: #5cd4cb
+    ),
+    accent: (
+      base: #34B2AC
+    ),
+    danger: (
+      base: #F25F5F,
+    ),
+    orange: (
+      base: #F9AE41
+    ),
+    warning: (
+      base: #F4E025
+    ),
+    success: (
+      base: #4bc9a9
+    )
+);
+
+$sub-heading-size: 2;
+$sub-heading-margin: 20px;

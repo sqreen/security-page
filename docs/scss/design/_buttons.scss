@@ -1,0 +1,128 @@
+// Colors based on styleguide, to add more please check the mixin buttons.
+$color-list: (primary, default, danger, success, accent);
+
+@each $color-item in $color-list {
+  @include buttons($color-item);
+}
+
+@include button(28, 8);
+
+.button__default {
+  &.success {
+    @include font-size(1.8);
+    padding: 0 20px;
+    border: 2px solid #4bc9a9;
+    color: #4bc9a9;
+    height: 40px;
+    line-height: 38px;
+    border-radius: 8px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #4bc9a9;
+      border-color: #4bc9a9;
+      color: palette(white);
+      text-decoration: none;
+    }
+  }
+}
+
+.button__success {
+  @include font-size(2.3);
+  padding: 0 25px;
+  height: 50px;
+  line-height: 48px;
+  border-radius: 8px;
+  background-color: palette(success);
+  margin-bottom: 18px;
+}
+
+$switch-btn-color: #22bbbf;
+$switch-container-color: #f9f9f9;
+
+.switch__container {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  margin: 0 15px;
+}
+
+.switch__button {
+  display: none;
+
+  &:checked + .switch__label {
+    &::before {
+      right: 0;
+      background-color: $switch-btn-color;
+    }
+  }
+}
+
+.switch__label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  height: 20px;
+  padding: 0;
+  line-height: 12px;
+  border: 1px solid palette(gray, light);
+  border-radius: 18px;
+  background-color: $switch-container-color;
+
+  &::before {
+    content: "";
+    display: block;
+    height: 22px;
+    width: 22px;
+    margin: -1px;
+    background: $switch-btn-color;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 32px;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+  }
+}
+
+.switch__button:checked + .switch__label .onoffswitch-inner { margin-left: 0; }
+
+.switch-button {
+  background-color: palette(gray, lightest);
+  border: 1px solid palette(gray, light);
+  border-radius: 20px;
+
+  .btn-default {
+    @include font-size(1.1);
+    background-color: transparent;
+    border: 0;
+    border-radius: 20px !important;
+    color: darken(palette(gray, light), 10%);
+    transition: all 0.4s ease;
+    width: 70px;
+
+    &.active,
+    &:active {
+      box-shadow: 0 0 palette(success, base);
+      color: palette(white, base);
+      z-index: 3;
+    }
+
+    &:first-child {
+      margin-left: 0;
+
+      &:not(.active) {
+        box-shadow: 70px 0 palette(success, base);
+      }
+    }
+
+    &:last-child {
+      margin-left: 0;
+
+      &:not(.active) {
+        box-shadow: -70px 0 palette(success, base);
+      }
+    }
+  }
+}

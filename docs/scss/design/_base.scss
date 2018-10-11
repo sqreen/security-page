@@ -1,0 +1,157 @@
+html {
+  font-family: "Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 62.5%; /* Font-size base 10 */
+
+  @media (max-width:768px) {
+    font-size: 50%; /* Font-size base 8 */
+  }
+}
+
+.full__bg {
+  background-color: palette(primary, dark);
+  min-height: 660px;
+}
+
+.full-width {
+  min-height: 600px;
+  background-color: #f7f8f9;
+
+  &.odd {
+    background-color: palette(white);
+  }
+
+  &.even {
+    background-color: #f7f8f9;
+  }
+
+  .container {
+    padding: 90px 0 0 30px;
+    overflow: hidden;
+  }
+
+  p {
+    margin: 17px 0;
+
+    + p {
+      margin-top: 20px;
+    }
+  }
+
+  @media (max-width:768px) {
+    min-height: auto;
+    height: auto;
+    padding-bottom: 35px;
+    text-align: center;
+
+    .container {
+      padding: 90px 15px 0;
+    }
+  }
+}
+
+#integrated-workflow {
+
+  .container {
+    margin: 0 auto;
+  }
+
+  .button__group {
+    margin: 45px 0 90px;
+  }
+
+  a {
+    @media (max-width:768px) {
+      @include font-size(1.3);
+    }
+  }
+
+  h2 {
+    margin-top: 90px;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 20px auto;
+
+    @media (min-width: 768px) {
+      width: 780/768*100%;
+    }
+
+    @media (min-width: 992px) {
+      width: 780/992*100%;
+    }
+
+    @media (min-width: 1170px) {
+      width: 780/1170*100%;
+    }
+
+    + .list {
+      margin: 30px auto 45px;
+
+      @media (min-width: 768px) {
+        width: 780/768*100%;
+      }
+
+      @media (min-width: 992px) {
+        width: 780/992*100%;
+      }
+
+      @media (min-width: 1170px) {
+        width: 780/1170*100%;
+      }
+    }
+  }
+}
+
+.list {
+  margin: 30px 0 45px;
+
+  li {
+    @include font-size(1.8);
+    line-height: 28px;
+    color: #757575;
+  }
+}
+
+.label {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  &.label-success {
+    background-color: palette(accent, base);
+  }
+}
+
+.margin_bottom_sm {
+  margin-bottom: 15px;
+}
+
+.paddding-top-xl {
+  padding-top: 90px;
+}
+
+.paddding-top-md {
+  padding-top: 30px;
+}
+
+.panel {
+  background-color: palette(gray, lightest);
+  border: 1px solid palette(gray, light);
+
+  .panel-heading {
+    @include font-size(1.8);
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid palette(gray, light);
+  }
+
+  .panel-body {
+    @include font-size(1.4);
+    background-color: transparent;
+    color: palette(gray, dark);
+  }
+}

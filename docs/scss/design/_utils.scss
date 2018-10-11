@@ -1,0 +1,64 @@
+/// Pallete Map Function
+/// @author Igo Lapa
+/// @description Map styleguide colors.
+/// @return {string} hex.
+
+@function palette($palette, $tone: 'base') {
+  @return map-get(map-get($palettes, $palette), $tone);
+}
+
+.align-center {
+  text-align: center;
+}
+
+.u-relative {
+  position: relative;
+}
+
+.u-absolute {
+  position: absolute;
+}
+
+.u-left {
+  float: left;
+}
+
+.u-right {
+  float: right;
+}
+
+.margin-top-sm {
+  margin-top: 15px;
+}
+
+.margin-top-md {
+  margin-top: 30px;
+}
+
+.margin-top-lg {
+  margin-top: 55px;
+}
+
+.margin-top-xl {
+  margin-top: 70px;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 15px;
+}
+
+.margin-bottom-md {
+  margin-bottom: 30px;
+}
+
+.margin-bottom-xl {
+  margin-bottom: 70px;
+}
+
+small {
+  color: #757575;
+}
+
+.color-success {
+  color: #4bc9a9;
+}
