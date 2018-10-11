@@ -14,8 +14,7 @@ $(function() {
     //========================================
     var lastId,
         topMenu         = $('.table-of-contents ul'),
-        menuFixedTop    = 100,
-        topMenuHeight   = 423;
+        menuFixedTop    = $(".navbar-fixed-top")[0].clientHeight;
 
     // Map links in nav
     //========================================
@@ -30,25 +29,23 @@ $(function() {
     // Bind click handler to menu items
     //========================================
     menuItems.click(function(e) {
+      e.preventDefault();
       var href = $(this).attr("href"),
-        offsetTop = href === "#" ? 0 : $(href).offset().top - menuFixedTop;
-        $('html, body').stop().animate({
-          scrollTop: offsetTop
-        }, 1000);
-        // e.preventDefault();
+        offsetTop = href === "#" ? 0 : $(href).offset().top - $(this)[0].offsetTop - menuFixedTop;
+      $('html, body').stop().animate({
+        scrollTop: offsetTop
+      }, 1000);
     });
 
     // Bind to scroll
     //========================================
     $(window).scroll(function() {
-      var toTop = $('body').scrollTop();
-
-      // Get container scroll position
-      var fromTop = $(this).scrollTop() + topMenuHeight;
 
       // Get id of current scroll item
       var cur = scrollItems.map(function() {
-        if ($(this).offset().top + topMenuHeight - (menuFixedTop + 45) < fromTop)
+        var titlePosition = $(this).offset().top;
+        var menuLinkPosition = $("[href='#" + $(this)[0].id + "']").offset().top;
+        if (titlePosition < menuLinkPosition)
           return this;
         }
       );
