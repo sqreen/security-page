@@ -2,7 +2,7 @@
 
 # Security-overview
 
-Read the full docs and context behind the project [here](https://www.sqreen.io/resources/security-page)
+Read the full docs and context behind the project [here](https://www.sqreen.com/resources/security-page)
 
 ## Get started
 
@@ -20,6 +20,6 @@ It will compile, minify the css and compress the javascript into `/build`.
 
 ## Easily deploy it with Netlify or Github pages
 
-[Netlify](https://www.sqreen.io/resources/security-page#how-to-deploy-it-with-netlify)
+[Netlify](https://www.sqreen.com/resources/security-page#how-to-deploy-it-with-netlify)
 
-[Github pages](https://www.sqreen.io/resources/security-page#how-to-deploy-it-with-github-pages)
+[Github pages](https://www.sqreen.com/resources/security-page#how-to-deploy-it-with-github-pages)
